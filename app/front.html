@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LLM Discussion Room</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===========================================================
+       TOP TOOLBAR — CHATROOM BUILDER
+       =========================================================== -->
+  <div id="chatroomToolbar">
+      <h1>Create Chatroom</h1>
+
+      <div id="draggedAIContainer"></div>
+
+      <button id="createChatroomBtn">Create Chatroom</button>
+  </div>
+
+  <!-- ===========================================================
+       MAIN 2-COLUMN AREA: SIDEBAR + CHAT
+       =========================================================== -->
+  <div id="workspace">
+
+      <!-- LEFT SIDEBAR -->
+      <div id="sidebar">
+        <h2>AI Models</h2>
+        <ul id="aiList">
+          <li draggable="true" data-ai="CoderAI">CoderAI</li>
+          <li draggable="true" data-ai="PhilosopherAI">PhilosopherAI</li>
+          <li draggable="true" data-ai="JokerAI">JokerAI</li>
+          <li draggable="true" data-ai="ScientistAI">ScientistAI</li>
+          <li draggable="true" data-ai="TeacherAI">TeacherAI</li>
+          <li draggable="true" data-ai="PoetAI">PoetAI</li>
+          <li draggable="true" data-ai="VillainAI">VillainAI</li>
+          <li draggable="true" data-ai="DoctorAI">DoctorAI</li>
+          <li draggable="true" data-ai="ComedianAI">ComedianAI</li>
+          <li draggable="true" data-ai="AnimeAI">AnimeAI</li>
+          <li draggable="true" data-ai="LawyerAI">LawyerAI</li>
+          <li draggable="true" data-ai="HistorianAI">HistorianAI</li>
+        </ul>
+      </div>
+
+      <!-- RIGHT CHAT WINDOW -->
+      <div id="mainContent">
+          <div class="container">
+            <h1>Discussion Room</h1>
+
+            <div id="status">Status: <span id="conn">Connecting...</span></div>
+
+            <div id="messages" class="messages-wrap"></div>
+
+            <div class="controls">
+              <input id="inputBox" type="text" placeholder="Type your message" />
+              <button id="sendBtn" disabled>Send</button>
+            </div>
+
+            
+      </div>
+
+  </div>
+
+  <!-- FLOATING DEBATE BUTTON -->
+  <button id="debate">Debate Room</button>
+
+  <!-- DEBATE POPUP -->
+  <dialog id="debate_dialogbox">
+    <form>
+      <div id="agent_list_container"></div>
+
+      <input type="text" id="debate_topic" placeholder="Enter Debate Topic" required />
+      <input type="number" id="rounds" placeholder="Number of Rounds" required min="1" max="10" />
+
+      <button id="start_debate">Start Debate</button>
+      <button type="button" onclick="closedebate()">Cancel</button>
+    </form>
+  </dialog>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
+
