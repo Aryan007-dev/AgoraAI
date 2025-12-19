@@ -25,7 +25,7 @@ The project is designed to explore agent orchestration, conversational memory, r
 - FastAPI
 - WebSockets
 - SQLAlchemy
-- SQLite (development)
+- PostgreSQL
 
 ### Frontend
 - HTML
